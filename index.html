@@ -31,7 +31,7 @@ body {
     height: 100vh;
     z-index: 0;
 }
-.cont video {
+.cont iframe {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
@@ -42,18 +42,25 @@ body {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     z-index: -100;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 </style>
 <body>
     <div class="cont">
         <img class="overlay">
-        <video class="visual" width="1920" height="1080" autoplay loop muted>
+        <iframe src="https://iframe.mediadelivery.net/embed/137341/c35e566e-2e58-4b32-b475-7b97ac5233e2?autoplay=true&loop=true&muted=true&showinfo=0&controls=0&autohide=1" loading="lazy" width="1920" height="1080" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+        <!-- <video class="visual" width="1920" height="1080" autoplay loop muted>
             <source src="TESTRENDER.mp4" type="video/mp4">
-        </video> 
+        </video>  -->
     </div>
     
     
