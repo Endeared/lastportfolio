@@ -13,6 +13,7 @@ body {
     margin: 0px;
     overflow: hidden;
     background-color: black;
+    color: white;
 }
 
 .overlay {
@@ -49,7 +50,7 @@ body {
     animation: fadeIn 8s forwards;
 }
 
-.header {
+.header, .enter {
     z-index: 15;
     display: flex;
     flex-direction: row;
@@ -60,21 +61,26 @@ body {
     letter-spacing: -1px;
 }
 
+.enter {
+    display: flex;
+    bottom: 50px;
+    font-size: 48px;
+    font-weight: 100;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    height: 80%;
+    animation: fadeInEnter 6s forwards;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #nameAndTitle {
     text-align: left;
     padding: 0;
     padding-right: 8px;
     margin: 0;
     font-size: 24px;
-}
-
-#blinker {
-    width: 7px;
-    height: 27px;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-    -webkit-animation: blinking 0.8s infinite;
-    animation: blinking 0.8s steps(1) infinite;
 }
 
 #nameAndTitle {
@@ -112,12 +118,22 @@ body {
     100% { opacity: 0.8; }
 }
 
+@keyframes fadeInEnter {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 </style>
 <body>
 
     <div class="cont">
         <div class="header">
             <div id="nameAndTitle"><b>ross hamey //</b> <i>web & software developer</i></div>
+        </div>
+
+        <div class="enter">
+            <div id="enterText">ABOUT</div>
         </div>
 
         <img class="overlay">
