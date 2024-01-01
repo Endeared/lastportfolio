@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ross Hamey</title>
+    <icon href="./favicon.ico" type="image/x-icon">
 </head>
 
 <style>
@@ -25,7 +26,7 @@ body {
     background-repeat: repeat;
     width: 101%;
     height: 101%;
-    animation: fadeInOverlay 8s forwards;
+    animation: fadeInOverlay 5s forwards;
 }
 
 .cont {
@@ -47,7 +48,7 @@ body {
     min-height: 100%;
     z-index: -100;
     opacity: 0;
-    animation: fadeIn 8s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .header, .enter {
@@ -71,8 +72,9 @@ body {
     justify-content: center;
     align-items: end;
     height: 80%;
-    animation: fadeInEnter 6s forwards;
+    animation: fadeInEnter 1s forwards;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 15;
 }
 
 #nameAndTitle {
@@ -89,6 +91,45 @@ body {
     animation: typing 2s steps(100, end), cursor 0.8s step-end infinite;
     border-right: 8px solid white;
     letter-spacing: -1px;
+}
+
+.enterText {
+    z-index: 16;
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: center;
+    text-decoration: none;
+    color: white;
+}
+
+.enterText::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.enterText::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.enterText:hover::after,
+.enterText:focus::after {
+    transform: scale(1);
+}
+
+.videos {
+    z-index: -100;
 }
 
 @keyframes typing {
@@ -133,11 +174,11 @@ body {
         </div>
 
         <div class="enter">
-            <div id="enterText">ABOUT</div>
+            <a class="enterText" href='./about.html'>ABOUT</a>
         </div>
 
         <img class="overlay">
-        <iframe src="https://iframe.mediadelivery.net/embed/137341/3bbc32e1-f94c-4eda-8925-63f013e7d9ff?autoplay=true&loop=true&muted=true&showinfo=0&controls=0&autohide=1" loading="lazy" width="1920" height="1080" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+        <iframe class="videos" src="https://iframe.mediadelivery.net/embed/137341/3bbc32e1-f94c-4eda-8925-63f013e7d9ff?autoplay=true&loop=true&muted=true&showinfo=0&controls=0&autohide=1" loading="lazy" width="1920" height="1080" style="border: none;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
         <!-- <video class="visual" width="1920" height="1080" autoplay loop muted>
             <source src="TESTRENDER.mp4" type="video/mp4">
         </video>  -->
