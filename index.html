@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ross Hamey</title>
     <icon href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <style>
 
 body {
     padding: 0;
-    margin: 0px;
+    margin: 0;
     overflow: hidden;
     background-color: black;
     color: white;
@@ -26,13 +27,15 @@ body {
     background-repeat: repeat;
     width: 101%;
     height: 101%;
-    animation: fadeInOverlay 5s forwards;
+    animation: fadeInOverlay 8s forwards;
+    pointer-events: none;
 }
 
 .cont {
     position: relative;
     height: 100vh;
     z-index: 0;
+    opacity: 0;
 }
 
 .cont iframe {
@@ -48,7 +51,8 @@ body {
     min-height: 100%;
     z-index: -100;
     opacity: 0;
-    animation: fadeIn 5s forwards;
+    animation: fadeIn 8s forwards;
+    pointer-events: none;
 }
 
 .header, .enter {
@@ -72,7 +76,7 @@ body {
     justify-content: center;
     align-items: end;
     height: 80%;
-    animation: fadeInEnter 1s forwards;
+    animation: fadeInEnter 8s forwards;
     font-family: 'Courier New', Courier, monospace;
     z-index: 15;
 }
@@ -165,6 +169,13 @@ body {
     100% { opacity: 1; }
 }
 
+.pausedWrapper {
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
 </style>
 <body>
 
@@ -187,4 +198,24 @@ body {
     
     
 </body>
+
+<script>
+    let pausedWrapper = document.createElement('div');
+    let contCopy = document.querySelector('.cont').cloneNode(true);
+    contCopy.style.opacity = 1;
+    let cont = document.querySelector('.cont');
+    let body = document.querySelector('body');
+
+    pausedWrapper.className = 'pausedWrapper';
+    pausedWrapper.appendChild(cont);
+    document.body.appendChild(pausedWrapper);
+    // wait for iframe video to load
+    $(document).ready(function() {
+        $('.videos').on('load', function() {
+            // remove pausedWrapper, then make contCopy visible
+            pausedWrapper.remove();
+            body.appendChild(contCopy);
+        });
+    });
+</script>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross Hamey</title>
+    <icon href="./favicon.ico" type="image/x-icon"></icon>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    body {
+        background-color: black;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 24px;
+    }
+
+    .header a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    .headerLink {
+        display: block;
+        position: relative;
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: center;
+        text-align: center;
+    }
+
+    .headerLink::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: white;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    .headerLink::after {
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    .headerLink:hover::after,
+    .headerLink:focus::after {
+        transform: scale(1);
+    }
+
+    .spacer {
+        width: 50%;
+    }
+
+    .spacerBlock {
+        font-size: 24px;
+        color: white;
+        width: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="header">
+        <a class='headerLink' href="./index.html">HOME</a>
+        <div class="spacer"></div>
+        <a class='headerLink' href="./about.html">ABOUT</a>
+        <div class="spacerBlock"> | </div>
+        <a class='headerLink' href="./experience.html">EXPERIENCE</a>
+        <div class="spacerBlock"> | </div>
+        <a class='headerLink' href="./skills.html">SKILLS & PROJECTS</a>
+        <div class="spacerBlock"> | </div>
+        <a class='headerLink' id="contactLink" href="./contact.html">CONTACT / RESUME</a>
+    </div>
+</body>
+</html>
