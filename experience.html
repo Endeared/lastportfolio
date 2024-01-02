@@ -82,11 +82,11 @@
 
     .experienceItem {
         display: flex;
-        flex-direction: column;
-        padding-top: 50px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding-left: 150px;
         padding-right: 150px;
-        width: 50%;
     }
 
     .lineOne {
@@ -119,6 +119,17 @@
     .experienceWrapper {
         padding-top: 2%;
     }
+
+    .experienceItemWrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        width: 50%;
+    }
+
+    #miami, #telus, #butler {
+        width: 30%;
+    }
 </style>
 <body>
     <div class="header">
@@ -135,64 +146,73 @@
 
     <div class="experienceWrapper">
         <div class="experienceItem">
-            <div class="lineOne">
-                <div class="jobTitle">DATA INTEGRATION INTERN</div>
-                <div class="spacerBlockTwo"> | </div>
-                <div class="jobCompany">Miami University, Oxford OH</div>
+            <div class="experienceItemWrapper">
+                <div class="lineOne">
+                    <div class="jobTitle">DATA INTEGRATION INTERN</div>
+                    <div class="spacerBlockTwo"> | </div>
+                    <div class="jobCompany">Miami University, Oxford OH</div>
+                </div>
+                <div class="lineTwo">
+                    <div class="time">MAY 2023 - PRESENT</div>
+                </div>
+                <div class="jobInfo">
+                    <ul>
+                        <li>Develop and maintain applications using JavaScript and iPaaS</li>
+                        <li>Troubleshoot and resolve technical issues with existing applications</li>
+                        <li>Plan and navigate through practical problems to implement maintainable solutions (i.e
+                            applications for MECM, JAMF, Cisco DNAC, etc.)</li>
+                        <li>Work with other interns / staff as needed to implement said solutions</li>
+                    </ul>
+                </div>
             </div>
-            <div class="lineTwo">
-                <div class="time">MAY 2023 - PRESENT</div>
-            </div>
-            <div class="jobInfo">
-                <ul>
-                    <li>Develop and maintain applications using JavaScript and iPaaS</li>
-                    <li>Troubleshoot and resolve technical issues with existing applications</li>
-                    <li>Plan and navigate through practical problems to implement maintainable solutions (i.e
-                        applications for MECM, JAMF, Cisco DNAC, etc.)</li>
-                    <li>Work with other interns / staff as needed to implement said solutions</li>
-                </ul>
-            </div>
+            <img id="miami" src="miamiw.png">
         </div>
 
         <div class="experienceItem">
-            <div class="lineOne">
-                <div class="jobTitle">ONLINE DATA ANALYST</div>
-                <div class="spacerBlockTwo"> | </div>
-                <div class="jobCompany">TELUS International, Remote</div>
+            <div class="experienceItemWrapper">
+                <div class="lineOne">
+                    <div class="jobTitle">ONLINE DATA ANALYST</div>
+                    <div class="spacerBlockTwo"> | </div>
+                    <div class="jobCompany">TELUS International, Remote</div>
+                </div>
+                <div class="lineTwo">
+                    <div class="time">NOV 2022 - PRESENT</div>
+                </div>
+                <div class="jobInfo">
+                    <ul>
+                        <li>Independent work as a contractor to help analyze crowd-sourced data for accurate information, to
+                            later be used in implementing applications / machine learning</li>
+                        <li>Regular examination of data / search engine results stemming from customers</li>
+                        <li>Accurate optimization (when needed) of data / search engine results</li>
+                        <li>Self-guided position with no direct supervision - only quality reviews of work</li>
+                    </ul>
+                </div>
             </div>
-            <div class="lineTwo">
-                <div class="time">NOV 2022 - PRESENT</div>
-            </div>
-            <div class="jobInfo">
-                <ul>
-                    <li>Independent work as a contractor to help analyze crowd-sourced data for accurate information, to
-                        later be used in implementing applications / machine learning</li>
-                    <li>Regular examination of data / search engine results stemming from customers</li>
-                    <li>Accurate optimization (when needed) of data / search engine results</li>
-                    <li>Self-guided position with no direct supervision - only quality reviews of work</li>
-                </ul>
-            </div>
+            <img id="telus" src="telusw.png">
         </div>
 
         <div class="experienceItem">
-            <div class="lineOne">
-                <div class="jobTitle">MOSQUITO CONTROL GRANT INTERN</div>
-                <div class="spacerBlockTwo"> | </div>
-                <div class="jobCompany">Butler County Health Department, Hamilton OH</div>
+            <div class="experienceItemWrapper">
+                <div class="lineOne">
+                    <div class="jobTitle">MOSQUITO CONTROL GRANT INTERN</div>
+                    <div class="spacerBlockTwo"> | </div>
+                    <div class="jobCompany">Butler County Health Department, Hamilton OH</div>
+                </div>
+                <div class="lineTwo">
+                    <div class="time">APR 2019 - NOV 2019</div>
+                </div>
+                <div class="jobInfo">
+                    <ul>
+                        <li>Maintain extensive records of purchases, trapping, material delivery, and public complaints
+                            throughout duration of program</li>
+                        <li>Created and maintained budget for the program / grant provided by the Ohio EPA</li>
+                        <li>Strong verbal and written communication to peers, citizens, and officials throughout Butler County</li>
+                        <li>Extensive work with standard computer software (i.e Excel) to keep records and communicate
+                            with the Ohio EPA to ensure program ran as smoothly as possible</li>
+                    </ul>
+                </div>
             </div>
-            <div class="lineTwo">
-                <div class="time">APR 2019 - NOV 2019</div>
-            </div>
-            <div class="jobInfo">
-                <ul>
-                    <li>Maintain extensive records of purchases, trapping, material delivery, and public complaints
-                        throughout duration of program</li>
-                    <li>Created and maintained budget for the program / grant provided by the Ohio EPA</li>
-                    <li>Strong verbal and written communication to peers, citizens, and officials throughout Butler County</li>
-                    <li>Extensive work with standard computer software (i.e Excel) to keep records and communicate
-                        with the Ohio EPA to ensure program ran as smoothly as possible</li>
-                </ul>
-            </div>
+            <img id="butler" src="butlerw.png">
         </div>
     </div> 
 </body>

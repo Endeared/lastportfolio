@@ -38,16 +38,18 @@
         font-weight: 500;
     }
 
-    .headerLink {
-        display: block;
+    .headerLink, .projectCategory {
+        display: flex;
         position: relative;
         opacity: 1;
         transform: scale(1);
         transform-origin: center;
-        text-align: center;
+        text-align: left;
+        text-decoration: none;
+        color: white;
     }
 
-    .headerLink::after {
+    .headerLink::after, .projectCategory::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -59,14 +61,16 @@
         transition: opacity 300ms, transform 300ms;
     }
 
-    .headerLink::after {
+    .headerLink::after, .projectCategory::after {
         opacity: 1;
         transform: scale(0);
         transform-origin: center;
     }
 
     .headerLink:hover::after,
-    .headerLink:focus::after {
+    .headerLink:focus::after,
+    .projectCategory:hover::after,
+    .projectCategory:focus::after {
         transform: scale(1);
     }
 
@@ -122,6 +126,7 @@
         flex-direction: row;
         padding-left: 150px;
         padding-right: 150px;
+        padding-bottom: 100px;
     }
 
     .projects {
@@ -140,7 +145,7 @@
         width: 50%;
     }
 
-    .skillItem, .projectItem {
+    .skillItem {
         padding-top: 50px;
     }
 
@@ -201,7 +206,20 @@
     }
 
     .projectCategory {
-        padding-bottom: 40px;
+        padding-bottom: 10px;
+        padding-top: 50px;
+    }
+
+    .referenceLink, .cseRepo {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        width: 15%;
+    }
+
+    .projectCategory {
+        display: flex;
+        flex-direction: column;
     }
 </style>
 <body>
@@ -260,38 +278,48 @@
         <div class="projects">
             PROJECTS
             <div class="projectItem">
-                <div class="projectCategory">
+                <a class="projectCategory" href="https://github.com/Endeared/poolTableBot">
                     <div class="projectTitleWrapper">
                         <div class="projectTitle">BILLIARDS BALL IDENTIFIER </div>
                         <div class="projectTools"><i class="devicon-python-plain"></i> <i class="devicon-opencv-plain"></i> <i class="devicon-pytorch-original"></i></div>
                     </div>
                     <div class="projectDescription">A neural network object detection model for identifying billiards balls on a pool table. Built with Python, OpenCV, PyTorch, and YOLOv5.</div>
-                    <div class="reference"><a class="referenceLink">Repository →</a></div>
-                </div>
-                <div class="projectCategory">
+                </a>
+                <a class="projectCategory" href="https://cursors.pro/">
                     <div class="projectTitleWrapper">
                         <div class="projectTitle">STATIC CURSOR WEBSITE </div>
                         <div class="projectTools"><i class="devicon-html5-plain"></i> <i class="devicon-css3-plain"></i> <i class="devicon-javascript-plain"></i></div>
                     </div>
                     <div class="projectDescription">Simple cursor website commissioned for a game. Freelance project. Currently in the process of building a fullstack rewrite using Node, Firebase, and MongoDB. Static page built with HTML, CSS, JavaScript.</div>
-                    <div class="reference"><a class="referenceLink">Live Site →</a></div>
-                </div>
-                <div class="projectCategory">
+                </a>
+                <a class="projectCategory" href="https://github.com/Endeared/weatherForecastPage">
                     <div class="projectTitleWrapper">
                         <div class="projectTitle">WEATHER WEB APP </div>
                         <div class="projectTools"><i class="devicon-html5-plain"></i> <i class="devicon-css3-plain"></i> <i class="devicon-javascript-plain"></i></div>
                     </div>
                     <div class="projectDescription">Simple weather web app. One of my first ever JavaScript projects. Uses OpenWeatherMap API. Built with HTML, CSS, JavaScript.</div>
-                    <div class="reference"><a class="referenceLink">Live Site →</a></div>
-                </div>
-                <div class="projectCategory">
+                </a>
+                <a class="projectCategory" href="https://github.com/Endeared/pythonDiscBots">
                     <div class="projectTitleWrapper">
                         <div class="projectTitle">DISCORD BOTS </div>
                         <div class="projectTools"><i class="devicon-python-plain"></i> <i class="devicon-firebase-plain"></i></div>
                     </div>
                     <div class="projectDescription">Various Discord bots built using Python - all are personal projects I made. All built using Python and / or Firebase.</div>
-                    <div class="reference"><a class="referenceLink">Repository →</a></div>
-                </div>
+                </a>
+                <a class="projectCategory" href="https://github.com/Endeared/tennis-talent-insight/tree/main">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">TENNIS TALENT INSIGHT </div>
+                        <div class="projectTools"><i class="devicon-python-plain"></i></div>
+                    </div>
+                    <div class="projectDescription">Small personal scraping / comparison project using Python / BeautifulSoup / matplotlib to compare men's tennis greats over time in terms of Grand Slam performances.</div>
+                </a>
+                <a class="projectCategory" href="https://github.com/Endeared/CSE153">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">CSE COURSEWORK </div>
+                        <div class="projectTools"><i class="devicon-python-plain"></i> <i class="devicon-cplusplus-plain"></i> <i class="devicon-java-plain"></i></div>
+                    </div>
+                    <div class="projectDescription">Repositories containing some of my coursework for CSE classes at Miami University.</div>
+                </a>
             </div>
         </div>
     </div>
