@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ross Hamey</title>
     <icon href="./favicon.ico" type="image/x-icon"></icon>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -128,6 +129,7 @@
         font-size: 24px;
         padding-right: 150px;
         padding-top: 50px;
+        width: 50%;
     }
 
     .skills {
@@ -136,6 +138,10 @@
         padding-left: 150px;
         padding-top: 50px;
         width: 50%;
+    }
+
+    .skillItem, .projectItem {
+        padding-top: 50px;
     }
 
     .skillCategory {
@@ -148,10 +154,54 @@
         font-family: 'Courier New', Courier, monospace;
     }
 
-    .wrapper2 {
+    .categoryList li i {
+        vertical-align: middle;
+    }
+
+    .projectTools i {
+        vertical-align: middle;
+    }
+
+    #axios {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+    .projectTitle {
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    .projectTools {
+        padding-top: 5px;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        padding-bottom: 5px;
+    }
+
+    .projectDescription {
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .reference {
+        padding-left: 40px;
+        padding-top: 10px;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .projectTitleWrapper {
         display: flex;
         flex-direction: row;
-        background-color: blue;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .projectCategory {
+        padding-bottom: 40px;
     }
 </style>
 <body>
@@ -174,34 +224,34 @@
                 <div class="skillCategory">
                     LANGUAGES
                     <ul class="categoryList">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Lua</li>
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>C#</li>
+                        <li><i class="devicon-html5-plain"></i> HTML5</li>
+                        <li><i class="devicon-css3-plain"></i> CSS3</li>
+                        <li><i class="devicon-javascript-plain"></i> JavaScript</li>
+                        <li><i class="devicon-python-plain"></i> Python</li>
+                        <li><i class="devicon-lua-plain"></i> Lua</li>
+                        <li><i class="devicon-java-plain"></i> Java</li>
+                        <li><i class="devicon-cplusplus-plain"></i> C++</li>
+                        <li><i class="devicon-csharp-plain"></i> C#</li>
                     </ul>
                 </div>
                 <div class="skillCategory">
                     FRAMEWORKS / TOOLS
                     <ul class="categoryList">
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>React</li>
-                        <li>jQuery</li>
-                        <li>axios</li>
-                        <li>Flask</li>
-                        <li>BeautifulSoup / Selenium</li>
-                        <li>OpenCV</li>
+                        <li><i class="devicon-nodejs-plain"></i> Node.js</li>
+                        <li><i class="devicon-express-original"></i> Express</li>
+                        <li><i class="devicon-react-original"></i> React</li>
+                        <li><i class="devicon-jquery-plain"></i> jQuery</li>
+                        <li><img id="axios" src="32372333.png"> axios</li>
+                        <li><i class="devicon-flask-original"></i> Flask</li>
+                        <li><i class="devicon-selenium-original"></i> BeautifulSoup / Selenium</li>
+                        <li><i class="devicon-opencv-plain"></i> OpenCV</li>
                     </ul>
                 </div>
                 <div class="skillCategory">
                     DATABASES
                     <ul class="categoryList">
-                        <li>Firebase</li>
-                        <li>MongoDB</li>
+                        <li><i class="devicon-firebase-plain"></i> Firebase</li>
+                        <li><i class="devicon-mongodb-plain"></i> MongoDB</li>
                     </ul>
                 </div>
             </div>
@@ -209,6 +259,40 @@
     
         <div class="projects">
             PROJECTS
+            <div class="projectItem">
+                <div class="projectCategory">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">BILLIARDS BALL IDENTIFIER </div>
+                        <div class="projectTools"><i class="devicon-python-plain"></i> <i class="devicon-opencv-plain"></i> <i class="devicon-pytorch-original"></i></div>
+                    </div>
+                    <div class="projectDescription">A neural network object detection model for identifying billiards balls on a pool table. Built with Python, OpenCV, PyTorch, and YOLOv5.</div>
+                    <div class="reference"><a class="referenceLink">Repository →</a></div>
+                </div>
+                <div class="projectCategory">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">STATIC CURSOR WEBSITE </div>
+                        <div class="projectTools"><i class="devicon-html5-plain"></i> <i class="devicon-css3-plain"></i> <i class="devicon-javascript-plain"></i></div>
+                    </div>
+                    <div class="projectDescription">Simple cursor website commissioned for a game. Freelance project. Currently in the process of building a fullstack rewrite using Node, Firebase, and MongoDB. Static page built with HTML, CSS, JavaScript.</div>
+                    <div class="reference"><a class="referenceLink">Live Site →</a></div>
+                </div>
+                <div class="projectCategory">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">WEATHER WEB APP </div>
+                        <div class="projectTools"><i class="devicon-html5-plain"></i> <i class="devicon-css3-plain"></i> <i class="devicon-javascript-plain"></i></div>
+                    </div>
+                    <div class="projectDescription">Simple weather web app. One of my first ever JavaScript projects. Uses OpenWeatherMap API. Built with HTML, CSS, JavaScript.</div>
+                    <div class="reference"><a class="referenceLink">Live Site →</a></div>
+                </div>
+                <div class="projectCategory">
+                    <div class="projectTitleWrapper">
+                        <div class="projectTitle">DISCORD BOTS </div>
+                        <div class="projectTools"><i class="devicon-python-plain"></i> <i class="devicon-firebase-plain"></i></div>
+                    </div>
+                    <div class="projectDescription">Various Discord bots built using Python - all are personal projects I made. All built using Python and / or Firebase.</div>
+                    <div class="reference"><a class="referenceLink">Repository →</a></div>
+                </div>
+            </div>
         </div>
     </div>
 
